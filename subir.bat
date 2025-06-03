@@ -6,7 +6,7 @@ REM Version: 2025-05-21
 set turma=n25-java1-01
 set dirgit=C:\Program Files\Git
 set /p comentario=Digite o comentário para fechar a versão de dados: 
-cd %USERPROFILE%\Documents\%turma%\
+cd C:\Java\n25-java1-01\
 echo Adicionando arquivos à versão...
 "%dirgit%\bin\git.exe" add .
 echo Fechando a versão...
