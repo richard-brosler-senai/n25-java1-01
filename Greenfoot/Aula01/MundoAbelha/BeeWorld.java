@@ -33,15 +33,15 @@ public class BeeWorld extends World
         addObject(abelha,45,152);
         
         Mosca mosca = new Mosca();
-        addObject(mosca,398,141);
+        addObject(mosca,32,271);
         
         Mosca mosca2 = new Mosca();
-        addObject(mosca2,80,270);
+        addObject(mosca2,32,334);
         
         Mosca mosca3 = new Mosca();
-        addObject(mosca3,196,274);
+        addObject(mosca3,32,394);
         
         Mosca mosca4 = new Mosca();
-        addObject(mosca4,271,262);
+        addObject(mosca4,32,452);
     }
 }
