@@ -8,6 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Abelha extends Actor
 {
+    //Definindo os fields
+    int vidas;
+    int score;
+    int PONTOS = 100;
+    //Definindo o constructor
+    /**
+     * Constructor da Classe Abelha
+     */
+    public Abelha(){
+        vidas = 3; //vai ter 3 vidas
+        score = 0;
+    }
     /**
      * Act - do whatever the Abelha wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -76,6 +88,7 @@ public class Abelha extends Actor
         if (isTouching(Mosca.class)) {
             removeTouching(Mosca.class);
             Greenfoot.playSound("slurp.wav");
+            atualizarScore();
             //Vai de 1 a 800
             int posX = Greenfoot.getRandomNumber(
                         getWorld().getWidth()) + 1;
@@ -106,6 +119,16 @@ public class Abelha extends Actor
                         getWorld().getHeight()) + 1;
             setLocation(posX, posY);
             Greenfoot.playSound("ouch.wav");
+            vidas--;//vidas = vidas - 1
+            if (vidas<=0){
+                getWorld().showText("GAME OVER", 400, 300);
+                Greenfoot.stop();
+            }
         }
+    }
+    
+    public void atualizarScore(){
+        score += PONTOS; //score = score + PONTOS
+        getWorld().showText("Score: " + score, 100, 10);
     }
 }
