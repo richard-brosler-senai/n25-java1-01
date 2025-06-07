@@ -23,6 +23,8 @@ public class Abelha extends Actor
             turn(5);  
         }
         verificarPosicao();
+        capturarMosca();
+        serCapturadoPelaAranha();
     }
     /**
      * Método que verifica posição da Abelha.
@@ -68,5 +70,42 @@ public class Abelha extends Actor
      */
     public boolean estaNaDireita(){
         return getX()>getWorld().getWidth()-10;
+    }
+    
+    public void capturarMosca(){
+        if (isTouching(Mosca.class)) {
+            removeTouching(Mosca.class);
+            Greenfoot.playSound("slurp.wav");
+            //Vai de 1 a 800
+            int posX = Greenfoot.getRandomNumber(
+                        getWorld().getWidth()) + 1;
+            //Vai de 1 a 600
+            int posY = Greenfoot.getRandomNumber(
+                        getWorld().getHeight()) + 1;
+            //Criando a mosca
+            Mosca mosca = new Mosca();
+            //Colocando no mundo na posição X, Y
+            getWorld().addObject(mosca, posX, posY);
+        }
+    }
+    
+    public void capturarMosca2(){
+        Actor mosca = getOneIntersectingObject(Mosca.class);
+        if (mosca != null){
+            getWorld().removeObject(mosca);
+        }
+    }
+    
+    public void serCapturadoPelaAranha(){
+        if (isTouching(Aranha.class)){
+            //Vai de 1 a 800
+            int posX = Greenfoot.getRandomNumber(
+                        getWorld().getWidth()) + 1;
+            //Vai de 1 a 600
+            int posY = Greenfoot.getRandomNumber(
+                        getWorld().getHeight()) + 1;
+            setLocation(posX, posY);
+            Greenfoot.playSound("ouch.wav");
+        }
     }
 }
