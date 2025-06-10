@@ -55,6 +55,7 @@ public class Abelha extends Actor
         capturarMosca();
         serCapturadoPelaAranha();
         animarAbelha();
+        atualizarVidas();
     }
     /**
      * Método que verifica posição da Abelha.
@@ -171,5 +172,9 @@ public class Abelha extends Actor
         indice = (indice + 1) % 4;
         //Alteramos a imagem de acordo com a variação do indice
         setImage(imgs[indice]);
+    }
+    
+    public void atualizarVidas(){
+        getWorld().showText("Vidas: " + vidas, 700, 10);
     }
 }

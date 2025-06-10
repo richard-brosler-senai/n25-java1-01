@@ -11,6 +11,7 @@ public class BeeWorld extends World
     //Fields
     private int score;
     private final int PONTOS = 100;
+    private Abelha abelha;
     /**
      * Constructor for objects of class BeeWorld.
      * 
@@ -32,7 +33,7 @@ public class BeeWorld extends World
         Aranha aranha = new Aranha();
         addObject(aranha,32,33);
         
-        Abelha abelha = new Abelha();
+        abelha = new Abelha();
         addObject(abelha,45,152);
         
         for (int qtd=0; qtd<20; qtd++){
@@ -56,5 +57,9 @@ public class BeeWorld extends World
     public void updateScore(){
         score += PONTOS;//score = score + PONTOS
         showText("Score: " + score, 100, 10);
+    }
+    //Acessador ou getter da Abelha
+    public Abelha getAbelha(){
+        return abelha;
     }
 }
