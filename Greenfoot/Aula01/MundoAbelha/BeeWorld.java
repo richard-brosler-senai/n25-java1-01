@@ -46,6 +46,12 @@ public class BeeWorld extends World
                 Greenfoot.getRandomNumber(360)+1;
             addObject(new Mosca(vel,rot), posX, posY);
         }
+        //Mostrando texto
+        TextoColorido txt = new TextoColorido(
+            "Mensagem Teste",500, 50, 25, 
+             Color.BLUE, Color.PINK
+        );
+        addObject(txt, 500, 50);
     }
     //Acessador ou getter do Score
     public int getScore(){
