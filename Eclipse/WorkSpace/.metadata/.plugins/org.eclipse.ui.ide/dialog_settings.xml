@@ -8,8 +8,8 @@
 		</section>
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="676"/>
-		<item key="DIALOG_Y_ORIGIN" value="337"/>
+		<item key="DIALOG_X_ORIGIN" value="488"/>
+		<item key="DIALOG_Y_ORIGIN" value="153"/>
 	</section>
 	<section name="SmartImportWizard">
 		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
@@ -20,8 +20,8 @@
 			<item value="C:\Java\n25-java1-01\Eclipse\WorkSpace\meuPrimeiroProjeto"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="63"/>
-			<item key="DIALOG_Y_ORIGIN" value="46"/>
+			<item key="DIALOG_X_ORIGIN" value="284"/>
+			<item key="DIALOG_Y_ORIGIN" value="38"/>
 			<item key="DIALOG_WIDTH" value="885"/>
 			<item key="DIALOG_HEIGHT" value="629"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
