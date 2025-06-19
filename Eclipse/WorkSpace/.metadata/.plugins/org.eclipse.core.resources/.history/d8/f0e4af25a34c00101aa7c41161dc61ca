@@ -1,0 +1,21 @@
+package br.com.senaisp.bauru.aula06;
+
+import java.util.Scanner;
+
+public class Exemplo03 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Criando uma matriz
+		//Cinema com 5 fileiras e 9 cadeiras por fileira
+		char[][] cinema = new char[5][9];
+		//Inicializando com _
+		for(int i=0;i<cinema.length;i++) {
+			//Preenchendo as poltronas
+			for (int j=0;j<cinema[i].length;j++) {
+				cinema[i][j] = '_';
+			}
+		}
+	}
+
+}
