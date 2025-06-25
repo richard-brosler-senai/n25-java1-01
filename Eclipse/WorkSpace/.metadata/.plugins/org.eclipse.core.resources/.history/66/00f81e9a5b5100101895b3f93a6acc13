@@ -1,0 +1,11 @@
+package br.com.senaisp.bauru.aula07;
+
+public class BaralhoTeste {
+
+	public static void main(String[] args) {
+		Baralho bar = new Baralho();
+		Carta ct = bar.getCartaSorteada();
+		System.out.println(ct);
+	}
+
+}
